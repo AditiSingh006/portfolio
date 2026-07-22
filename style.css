@@ -187,20 +187,42 @@ footer {
 
 .hero {
     position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
     overflow: hidden;
-    isolation: isolate;
 }
 
 .hero-video {
     position: absolute;
-    inset: 0;
+
+    top: 0;
+    left: 0;
 
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 
-    z-index: -2;
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+
+    z-index: 1;
 }
 
 .hero::before {
@@ -211,4 +233,10 @@ footer {
     background: rgba(0, 0, 0, 0.65);
 
     z-index: -1;
+}
+
+.hero-text,
+.profile {
+    position: relative;
+    z-index: 2;
 }
