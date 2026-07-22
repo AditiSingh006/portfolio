@@ -14,7 +14,7 @@ body {
 
 
 header {
-    padding:30px 8%;
+    padding: 28px 7%;
 }
 
 
@@ -38,7 +38,7 @@ a {
 
 
 section {
-    padding:100px 8%;
+    padding:120px 7%;
 }
 
 
@@ -52,16 +52,20 @@ section {
 
 
 .hero h1 {
-    font-size:4rem;
-    line-height:1.1;
+    font-size: 5.5rem;
+    line-height: 0.95;
+    letter-spacing: -3px;
+    font-weight: 800;
+    max-width: 650px;
 }
 
 
 .hero p {
-    margin-top:25px;
-    max-width:550px;
-    color:#aaa;
-    font-size:1.2rem;
+    margin-top: 32px;
+    max-width: 580px;
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    line-height: 1.9;
 }
 
 
