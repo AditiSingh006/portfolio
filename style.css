@@ -429,6 +429,39 @@ section h2{
 }
 
 /* ===========================
+   SECTION BACKGROUND VIDEOS (about / off-duty / contact)
+=========================== */
+
+.has-bg-video{
+    overflow:hidden;
+    isolation:isolate;
+}
+
+.section-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+    opacity:.28;
+}
+
+.has-bg-video::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(10,14,23,.88), rgba(10,14,23,.94));
+    z-index:-1;
+}
+
+.warm.has-bg-video::before{
+    background:
+        linear-gradient(to bottom, rgba(10,14,23,.88), rgba(10,14,23,.94)),
+        radial-gradient(ellipse 60% 50% at 15% 20%, rgba(227,164,94,.08), transparent);
+}
+
+/* ===========================
    ABOUT
 =========================== */
 .about{
