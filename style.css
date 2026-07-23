@@ -431,19 +431,39 @@ section h2{
 /* ===========================
    ABOUT
 =========================== */
-
 .about{
-    max-width:760px;
+    max-width:none;
+    border-top:1px solid var(--line);
 }
 
-.about p{
+.about-row{
+    display:grid;
+    grid-template-columns:160px 1fr;
+    gap:40px;
+    padding:28px 0;
+    border-bottom:1px solid var(--line);
+    max-width:900px;
+}
+
+.about-label{
+    font-family:var(--font-mono);
+    font-size:.78rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--text-dimmer);
+    padding-top:2px;
+}
+
+.about-row p{
     font-size:1.04rem;
     line-height:1.95;
     color:var(--text-dim);
-    margin-top:22px;
+    margin:0;
 }
 
-.about p:first-child{ margin-top:0; }
+@media(max-width:700px){
+    .about-row{ grid-template-columns:1fr; gap:8px; }
+}
 
 /* ===========================
    CARDS (about + what-i-love)
